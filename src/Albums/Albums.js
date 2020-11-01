@@ -8,11 +8,7 @@ class Albums extends Component {
     return (
       <section className="Albums">
         {albums.map((album) => (
-          <Album
-            key={album.id}
-            album={album}
-            // onClick={this.handleClick(album.id)}
-          />
+          <Album key={album.id} album={album} id={album.id} />
         ))}
       </section>
     );
