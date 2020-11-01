@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Albums.scss';
 import { fetchAlbums } from '../apiUtil';
+import Album from './Album';
 
 class Albums extends Component {
   constructor(props) {
@@ -23,9 +24,7 @@ class Albums extends Component {
     return (
       <section className="Albums">
         {albums.map((album) => (
-          <div className="album">
-            <p className="title">{album.title}</p>
-          </div>
+          <Album album={album} />
         ))}
       </section>
     );
